@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Professional SEO & Chrome Metadata -->
+    <title>NexusAI Hub </title>
+    <meta name="description" content="Discover 50+ handpicked top AI tools for gaming tips, photo editing, coding, video creation, and audio generation. Curated by M.1 Studio for high productivity.">
+    <meta name="keywords" content="AI tools directory, photo editor AI, gaming tips AI, coding AI, Gemini, ChatGPT, M.1 Studio, Pumpkin Store, best artificial intelligence software">
+    <meta name="author" content="M.1 Studio">
+    <meta property="og:title" content="NexusAI Hub - Ultimate AI Directory by M.1 Studio">
+    <meta property="og:description" content="Find the exact AI tool for photo editing, gaming, coding, video creation, and daily productivity.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #080b13;
+            --card-bg: rgba(18, 26, 43, 0.7);
+            --accent-blue: #6366f1;
+            --accent-purple: #a855f7;
+            --accent-cyan: #06b6d4;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --glow-color: rgba(99, 102, 241, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(168, 85, 247, 0.12) 0%, transparent 40%);
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(15px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(8, 11, 19, 0.85);
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #fff, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #fff;
+            text-shadow: 0 0 10px var(--accent-blue);
+        }
+
+        /* Hero / Header Section */
+        header {
+            text-align: center;
+            padding: 60px 20px 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 0 25px rgba(99, 102, 241, 0.4);
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 18px;
+            background: linear-gradient(135deg, #ffffff 40%, var(--text-muted));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Search Section */
+        .search-container {
+            max-width: 650px;
+            margin: 30px auto 10px;
+            position: relative;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 18px 25px 18px 55px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .search-bar:focus {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 25px var(--glow-color);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+
+        .search-tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .tag-btn {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .tag-btn:hover {
+            background: var(--accent-blue);
+            color: #fff;
+            border-color: transparent;
+        }
+
+        /* Container & Grid */
+        .container {
+            max-width: 1350px;
+            margin: 0 auto;
+            padding: 30px 20px 80px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 22px;
+        }
+
+        /* AI Card Styling */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            backdrop-filter: blur(12px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .card-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--accent-cyan);
+            border: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+
+        .card-title-group h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .card-tag {
+            font-size: 0.72rem;
+            color: var(--accent-purple);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Text truncation/expansion */
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .card-desc.expanded {
+            -webkit-line-clamp: unset;
+            overflow: visible;
+        }
+
+        .toggle-desc {
+            background: none;
+            border: none;
+            color: var(--accent-cyan);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: left;
+            margin-bottom: 18px;
+            padding: 0;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 11px 18px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+            margin-top: auto;
+        }
+
+        .btn:hover {
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            border-color: transparent;
+            color: #fff;
+            box-shadow: 0 4px 18px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Featured Highlight */
+        .card.featured {
+            border-color: rgba(168, 85, 247, 0.5);
+            background: linear-gradient(180deg, rgba(22, 31, 48, 0.95) 0%, rgba(168, 85, 247, 0.08) 100%);
+        }
+
+        /* M.1 Studio Section */
+        .studio-section {
+            background: linear-gradient(135deg, rgba(18, 26, 43, 0.9), rgba(10, 14, 25, 0.95));
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 24px;
+            padding: 50px 30px;
+            margin: 60px auto;
+            max-width: 1100px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(15px);
+        }
+
+        .studio-badge {
+            background: rgba(168, 85, 247, 0.15);
+            border: 1px solid var(--accent-purple);
+            color: #d8b4fe;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .studio-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #fff, var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .studio-text {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+        }
+
+        .pumpkin-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 600px;
+            width: 100%;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .pumpkin-icon {
+            font-size: 2.5rem;
+            color: #f97316;
+        }
+
+        .pumpkin-btn {
+            background: linear-gradient(90deg, #f97316, #ea580c);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-left: auto;
+            white-space: nowrap;
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+            transition: 0.2s;
+        }
+
+        .pumpkin-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .pumpkin-card { flex-direction: column; text-align: center; }
+            .pumpkin-btn { margin-left: 0; width: 100%; text-align: center; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-microchip" style="color: var(--accent-purple);"></i> NexusAI
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#directory">AI Directory</a></li>
+            <li><a href="#studio">M.1 Studio</a></li>
+            <li><a href="#pumpkin">Pumpkin Store</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="home">
+        <span class="badge"><i class="fa-solid fa-bolt"></i> Powered by M.1 Studio</span>
+        <h1>NexusAI Directory</h1>
+        <p class="subtitle">Explore 50 handpicked, next-gen AI tools for photo editing, gaming strategy, real-time research, advanced coding, and automation.</p>
+        
+        <!-- Search Engine -->
+        <div class="search-container">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="searchInput" class="search-bar" placeholder="Search by name or task (e.g. 'photo editor', 'gaming tips', 'coding')...">
+            <div class="search-tags">
+                <button class="tag-btn" onclick="setSearch('gaming tips')">🎮 Gaming Tips</button>
+                <button class="tag-btn" onclick="setSearch('photo editor')">🖼️ Photo Editor</button>
+                <button class="tag-btn" onclick="setSearch('coding')">💻 Coding</button>
+                <button class="tag-btn" onclick="setSearch('video')">🎥 Video Creation</button>
+                <button class="tag-btn" onclick="setSearch('music')">🎵 Music</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 50 AI Tools Grid -->
+    <div class="container" id="directory">
+        <div class="grid" id="aiGrid">
+<!-- 1. Gemini (Featured for Gaming Tips) -->
+<div class="card featured" data-keywords="google gemini gaming tips game walkthrough strategy real time research text code multimodal reasoning">
+    <div class="card-header">
+        <div class="card-icon" style="display: flex; align-items: center; justify-content: center;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 24C12 17.3726 6.62742 12 0 12C6.62742 12 12 6.62742 12 0C12 6.62742 17.3726 12 24 12C17.3726 12 12 17.3726 12 24Z" fill="url(#gemini-grad)"/>
+                <defs>
+                    <linearGradient id="gemini-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#1A73E8"/>
+                        <stop offset="0.5" stop-color="#A855F7"/>
+                        <stop offset="1" stop-color="#EA4335"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <div class="card-title-group">
+            <span class="card-tag">Gaming Tips & Reasoning</span>
+            <h3>Google Gemini</h3>
+        </div>
+    </div>
+    <p class="card-desc">The ultimate AI for high-level gaming tips, real-time web search, strategy breakdowns, complex logical reasoning, and multimodal task execution.</p>
+    <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+    <a href="https://gemini.google.com" target="_blank" class="btn">Go to Gemini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+</div>
+
+            <!-- 2. ChatGPT -->
+            <div class="card" data-keywords="chatgpt openai conversational assistant text writing creative gaming tips general knowledge problem solving">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Conversational Leader</span>
+                        <h3>ChatGPT</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Best all-rounder AI for general queries, creative storytelling, everyday brainstorming, structured answers, and quick code debugging.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://chatgpt.com" target="_blank" class="btn">Go to ChatGPT <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 3. Midjourney (Photo / Art) -->
+            <div class="card" data-keywords="midjourney photo editor image generator visual art photography photorealistic design creative graphics logo">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Photo & Visual Art</span>
+                        <h3>Midjourney</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Industry leading AI photo editor and visual artwork generator capable of producing cinematic, photorealistic imagery from simple prompts.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.midjourney.com" target="_blank" class="btn">Go to Midjourney <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 4. Claude AI (Coding) -->
+            <div class="card" data-keywords="claude ai anthropic coding programmer developer logic long form analysis writing code text debugging">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Coding & Deep Analysis</span>
+                        <h3>Claude AI</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Exceptional AI assistant specialized in clean coding architecture, deep document analysis, and natural human-like prose composition.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://claude.ai" target="_blank" class="btn">Go to Claude <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 5. Photoshop AI / Firefly (Photo Editor) -->
+            <div class="card" data-keywords="adobe firefly photoshop photo editor image manipulation generative fill background removal image edit art">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-image"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Pro Photo Editor</span>
+                        <h3>Adobe Firefly</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Top-tier photo editor powered by Adobe generative fill, enabling seamless picture retouching, background swapping, and graphical enhancements.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://firefly.adobe.com" target="_blank" class="btn">Go to Adobe Firefly <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+               <!-- 6. Cursor AI (Coding) -->
+            <div class="card" data-keywords="cursor ai coding software engineer developer ide python javascript full stack debugging autocomplete">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Developer Studio</span>
+                        <h3>Cursor AI</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Advanced AI code editor built for developers. Autocompletes entire codebases, fixes bugs instantly, and accelerates software creation.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.cursor.com" target="_blank" class="btn">Go to Cursor <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 7. Clipdrop (Photo Editor) -->
+            <div class="card" data-keywords="clipdrop photo editor remove background cleanup upscale image editing picture enhancer lighting edit">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Quick Photo Suite</span>
+                        <h3>Clipdrop</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Essential online photo editor utility for instant background removal, object cleanup, image upscaling, and relighting controls.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://clipdrop.co" target="_blank" class="btn">Go to Clipdrop <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 8. Perplexity AI -->
+            <div class="card" data-keywords="perplexity research search engine live web source citations facts gaming tips study research papers">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Live Research</span>
+                        <h3>Perplexity AI</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Real-time conversational search engine that delivers direct answers cited with live web links and academic accuracy.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.perplexity.ai" target="_blank" class="btn">Go to Perplexity <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 9. ElevenLabs -->
+            <div class="card" data-keywords="elevenlabs voice cloning audio generator text to speech voiceover realistic sound dubbing accents">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-wave-square"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Voice & Sound</span>
+                        <h3>ElevenLabs</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Ultra-realistic AI text-to-speech platform featuring expressive voice cloning, podcast narrations, and multi-language dubbing.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://elevenlabs.io" target="_blank" class="btn">Go to ElevenLabs <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 10. Runway Gen-2 -->
+            <div class="card" data-keywords="runway gen2 video creation text to video animation cinematic FX video editing visual effects">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-video"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Video Generator</span>
+                        <h3>Runway Gen-2</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Pioneering video generation AI transforming text prompts and still imagery into cinematic animated clips and video clips.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://runwayml.com" target="_blank" class="btn">Go to Runway <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 11. Suno AI -->
+            <div class="card" data-keywords="suno music composition songs generator lyrics singing vocals studio instrumentals sound track">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-music"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Music Production</span>
+                        <h3>Suno AI</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Generate full studio-quality songs complete with vocals, custom lyrics, and rich musical instruments from short text prompts.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://suno.com" target="_blank" class="btn">Go to Suno <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 12. Leonardo AI (Photo / Assets) -->
+            <div class="card" data-keywords="leonardo ai photo editor game assets 3d textures visual art concept design picture rendering">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-cubes"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Game Art & Photo</span>
+                        <h3>Leonardo.ai</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Professional creative suite designed for rendering game assets, realistic photo editing, high-precision textures, and concept art.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://leonardo.ai" target="_blank" class="btn">Go to Leonardo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 13. v0.dev (Coding) -->
+            <div class="card" data-keywords="v0 vercel frontend UI coding web design HTML CSS React tailwind developer components builder">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">UI Web Coding</span>
+                        <h3>v0 by Vercel</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Generates production-ready frontend React and Tailwind CSS user interface code straight from conversational prompts.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://v0.dev" target="_blank" class="btn">Go to v0 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 14. Krea AI (Photo) -->
+            <div class="card" data-keywords="krea ai photo editor real time sketch drawing live canvas image enhancement upscaler quality photo">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Realtime Photo Tool</span>
+                        <h3>Krea AI</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Real-time visual editor transforming basic sketches into high-resolution imagery along with powerful picture quality upscaling.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.krea.ai" target="_blank" class="btn">Go to Krea <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 15. Phind (Coding) -->
+            <div class="card" data-keywords="phind technical search coding programming software engineer documentation debug algorithm search">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-terminal"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Code Search Engine</span>
+                        <h3>Phind</h3>
+                    </div>
+                </div>
+                <p class="card-desc">A search engine engineered specifically for coders, providing instant answers and code snippets derived from tech docs.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.phind.com" target="_blank" class="btn">Go to Phind <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 16. Gamma App -->
+            <div class="card" data-keywords="gamma app presentations slide decks documents web pages design layout automated creator">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-file-powerpoint"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Presentation Maker</span>
+                        <h3>Gamma App</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Effortlessly design beautiful PowerPoint slide decks, interactive documents, and web pages in seconds using AI prompts.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://gamma.app" target="_blank" class="btn">Go to Gamma <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 17. Luma Dream Machine (Video) -->
+            <div class="card" data-keywords="luma dream machine video creator 3d animation video generation camera movement realistic shots">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-film"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Cinematic Video</span>
+                        <h3>Luma Dream Machine</h3>
+                    </div>
+                </div>
+                <p class="card-desc">High-speed AI video generation model capable of producing realistic 3D scenes and dynamic camera action clips.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://lumalabs.ai/dream-machine" target="_blank" class="btn">Go to Luma AI <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 18. Ideogram AI (Photo / Text Art) -->
+            <div class="card" data-keywords="ideogram photo editor typography text image visual graphic poster logo banner typography text edit">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-font"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Text & Photo Design</span>
+                        <h3>Ideogram AI</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Specialized AI image generator that excels at rendering flawless lettering, logo typography, and poster graphics.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://ideogram.ai" target="_blank" class="btn">Go to Ideogram <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 19. Udio AI (Music) -->
+            <div class="card" data-keywords="udio music creator audio vocals song tracks melody instrumental sound production">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-compact-disc"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Next-Gen Audio</span>
+                        <h3>Udio AI</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Create high-fidelity music tracks across any genre, featuring realistic emotional vocals and custom arrangement options.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.udio.com" target="_blank" class="btn">Go to Udio <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+    <!-- 20. Replit AI (Coding) -->
+            <div class="card" data-keywords="replit coding online ide cloud programming build web app developer node python deployment">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Cloud Coding</span>
+                        <h3>Replit Agent</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Build and deploy full-stack applications directly from plain language instructions inside your browser environment.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://replit.com" target="_blank" class="btn">Go to Replit <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 21. Canva AI (Photo Editor) -->
+            <div class="card" data-keywords="canva photo editor magic studio graphic design social media post thumbnails banner picture maker">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-object-group"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Easy Graphic Design</span>
+                        <h3>Canva Magic Studio</h3>
+                    </div>
+                </div>
+                <p class="card-desc">All-in-one photo editor and graphic studio suited for instant social media graphics, thumbnails, and quick picture tweaks.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.canva.com" target="_blank" class="btn">Go to Canva <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 22. Descript -->
+            <div class="card" data-keywords="descript video editing podcast voice transcript audio cut remove filler words audio editor">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-scissors"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Smart Media Editor</span>
+                        <h3>Descript</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Edit podcast audio and video recordings simply by editing text transcripts like a standard document.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.descript.com" target="_blank" class="btn">Go to Descript <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 23. HeyGen -->
+            <div class="card" data-keywords="heygen video creator avatar talking face video creation marketing realistic spokesperson">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-user-gear"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">AI Avatars & Video</span>
+                        <h3>HeyGen</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Generate professional studio videos featuring lifelike talking AI avatars and multi-language lip syncing.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.heygen.com" target="_blank" class="btn">Go to HeyGen <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 24. Pika Labs (Video) -->
+            <div class="card" data-keywords="pika labs video generator 3d animation video editing text to video video clips movement">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-clapperboard"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">3D Video Creator</span>
+                        <h3>Pika Labs</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Animate images or text prompts into high-energy short video sequences, featuring precise region editing controls.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://pika.art" target="_blank" class="btn">Go to Pika <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 25. Magnific AI (Photo Editor) -->
+            <div class="card" data-keywords="magnific ai photo editor upscaler detail enhancer picture editor photo detail realism upscale">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-maximize"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Extreme Photo Upscaler</span>
+                        <h3>Magnific AI</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Mind-blowing photo editor and upscaler that intelligently injects incredible texture detail and micro-realism into images.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://magnific.ai" target="_blank" class="btn">Go to Magnific <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 26. Poe by Quora -->
+            <div class="card" data-keywords="poe bot aggregator multi ai chatgpt claude custom bots conversational assistant models">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Bot Hub</span>
+                        <h3>Poe</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Access multiple leading language models in one place and build custom tailored chat assistants without coding.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://poe.com" target="_blank" class="btn">Go to Poe <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 27. GitHub Copilot (Coding) -->
+            <div class="card" data-keywords="github copilot coding autocomplete programmer editor vscode integration python script code">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-brands fa-github"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">AI Pair Programmer</span>
+                        <h3>GitHub Copilot</h3>
+                    </div>
+                </div>
+                <p class="card-desc">The original AI coding assistant integrated into code editors to suggest real-time lines and entire functions.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://github.com/features/copilot" target="_blank" class="btn">Go to Copilot <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 28. Consensus AI -->
+            <div class="card" data-keywords="consensus research scientific papers medical search facts study evidence academic">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Academic Search</span>
+                        <h3>Consensus AI</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Search engine that answers complex queries with evidence extracted directly from peer-reviewed research papers.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://consensus.app" target="_blank" class="btn">Go to Consensus <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 29. Otter AI -->
+            <div class="card" data-keywords="otter ai meeting transcriber audio recording notes zoom transcript voice summary">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Meeting Assistant</span>
+                        <h3>Otter.ai</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Automatically transcribes live online meetings, taking real-time notes and creating summarized key action items.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://otter.ai" target="_blank" class="btn">Go to Otter <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 30. Copy.ai -->
+            <div class="card" data-keywords="copy ai marketing copywriting blog writing text posts social media sales content writing">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Marketing Copy</span>
+                        <h3>Copy.ai</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Generate high-converting marketing copy, engaging social media posts, and automated email sequences instantly.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.copy.ai" target="_blank" class="btn">Go to Copy.ai <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 31. Hugging Face -->
+            <div class="card" data-keywords="hugging face open source coding models machine learning dataset py torch space demo">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-face-smile"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Open Source Hub</span>
+                        <h3>Hugging Face</h3>
+                    </div>
+                </div>
+                <p class="card-desc">The worldwide home of open-source AI models, research datasets, developer tools, and community-run web demos.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://huggingface.co" target="_blank" class="btn">Go to Hugging Face <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 32. Remove.bg (Photo Editor) -->
+            <div class="card" data-keywords="remove bg photo editor remove background cut picture isolate photo clean transparent png">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-eraser"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Instant BG Remover</span>
+                        <h3>Remove.bg</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Fast, single-click photo editor for instantly deleting image backgrounds and outputting transparent PNG cutouts.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.remove.bg" target="_blank" class="btn">Go to Remove.bg <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 33. Soundraw AI -->
+            <div class="card" data-keywords="soundraw music background track video sound royalty free audio composer studio">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-sliders"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Custom Music Generator</span>
+                        <h3>Soundraw</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Customize royalty-free background music tracks for videos, streams, and games by customizing mood, genre, and length.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://soundraw.io" target="_blank" class="btn">Go to Soundraw <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 34. DeepL Translator -->
+            <div class="card" data-keywords="deepl translation language accurate dictionary text translate documents voice global">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-language"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Pro AI Translation</span>
+                        <h3>DeepL Translate</h3>
+                    </div>
+                </div>
+                <p class="card-desc">World renowned neural translation service providing contextually accurate translations across dozens of languages.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.deepl.com" target="_blank" class="btn">Go to DeepL <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 35. Synthesia -->
+            <div class="card" data-keywords="synthesia video creator studio spokesperson corporate training avatars video maker">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-circle-play"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Video Presentation</span>
+                        <h3>Synthesia</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Turn written documents and scripts into professional presenter videos featuring photorealistic studio avatars.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.synthesia.io" target="_blank" class="btn">Go to Synthesia <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 36. Playground AI (Photo Editor) -->
+            <div class="card" data-keywords="playground ai photo editor canvas composite graphics design stable diffusion picture art">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-paint-brush"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Creative Photo Canvas</span>
+                        <h3>Playground AI</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Free online photo editor combining text-to-image AI, layer compositing, and visual artwork tweaking tools.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://playground.com" target="_blank" class="btn">Go to Playground <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 37. Codeium (Coding) -->
+            <div class="card" data-keywords="codeium coding free programming developer assistant editor code completion python cpp javascript">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-brackets-curly"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Free Coding Tool</span>
+                        <h3>Codeium</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Ultra-fast, free AI coding autocomplete plugin supporting 70+ programming languages across modern IDEs.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://codeium.com" target="_blank" class="btn">Go to Codeium <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 38. ChatPDF -->
+            <div class="card" data-keywords="chatpdf pdf document reader study research extract summary paper analyzer text">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Document Reader</span>
+                        <h3>ChatPDF</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Upload any PDF document, manual, or research paper to extract summaries and ask instant context-based questions.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.chatpdf.com" target="_blank" class="btn">Go to ChatPDF <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 39. Kaiber AI (Video) -->
+            <div class="card" data-keywords="kaiber video generator music video animation dynamic styles camera visualizer">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Anime & Style Video</span>
+                        <h3>Kaiber AI</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Creative video generation engine designed for producing stylized animations, music video visualizers, and keyframe motion.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://kaiber.ai" target="_blank" class="btn">Go to Kaiber <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 40. SeaArt AI (Photo Editor) -->
+            <div class="card" data-keywords="seaart photo editor anime art generator picture upscaler detail edit controlnet photo">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-wand-magic"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Photo & Rendering</span>
+                        <h3>SeaArt AI</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Feature-packed photo editor and visual artist platform packed with filter controls, upscalers, and detailed models.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.seaart.ai" target="_blank" class="btn">Go to SeaArt <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+              <!-- 41. Bolt.new (Coding) -->
+            <div class="card" data-keywords="bolt new fullstack web build coding browser app web builder node react deployment developer">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Full-Stack Coding</span>
+                        <h3>Bolt.new</h3>
+                    </div>
+                </div>
+                <p class="card-desc">In-browser AI web developer capable of building, executing, and deploying complete full-stack web applications live.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://bolt.new" target="_blank" class="btn">Go to Bolt.new <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 42. Vocalremover.media -->
+            <div class="card" data-keywords="vocal remover audio editor music splitter isolate voice track song editor sound">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-music"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Audio Separator</span>
+                        <h3>VocalRemover</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Separate singing vocals from instrumental tracks in any music file using fast AI stem separation algorithms.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://vocalremover.media" target="_blank" class="btn">Go to VocalRemover <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 43. Pictory AI -->
+            <div class="card" data-keywords="pictory video editor script to video short video maker video editing social media reel YouTube">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-photo-film"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Script to Video</span>
+                        <h3>Pictory AI</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Automatically convert written blog articles and scripts into engaging short videos complete with stock footage and subtitles.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://pictory.ai" target="_blank" class="btn">Go to Pictory <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 44. Taskade AI -->
+            <div class="card" data-keywords="taskade productivity workspace notes gaming tips organization project management mindmap workflow">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Autonomous Workflow</span>
+                        <h3>Taskade</h3>
+                    </div>
+                </div>
+                <p class="card-desc">AI-powered workspace for structuring team project tasks, generating mindmaps, and setting up autonomous agents.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.taskade.com" target="_blank" class="btn">Go to Taskade <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 45. Voice.ai -->
+            <div class="card" data-keywords="voice ai real time voice changer gaming tips discord streaming sound effects mic modulator">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Realtime Voice Changer</span>
+                        <h3>Voice.ai</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Real-time voice changer tailored for gaming streams and Discord calls, transforming your microphone voice live.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://voice.ai" target="_blank" class="btn">Go to Voice.ai <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 46. Looka AI -->
+            <div class="card" data-keywords="looka logo maker brand identity photo editor graphic design company icon vector design">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-vector-square"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Brand & Logo Maker</span>
+                        <h3>Looka</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Design custom high-resolution logos, brand color palettes, and business stationery instantly from your preferences.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://looka.com" target="_blank" class="btn">Go to Looka <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 47. Murf.ai -->
+            <div class="card" data-keywords="murf voiceover voice generator text to speech narrator voice audio recording editor">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-headphones"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Studio Voiceovers</span>
+                        <h3>Murf.ai</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Turn written text into studio-grade human voiceovers suited for presentations, e-learning courses, and YouTube videos.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://murf.ai" target="_blank" class="btn">Go to Murf <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 48. Blackbox AI (Coding) -->
+            <div class="card" data-keywords="blackbox ai coding developer search code extraction debug autocomplete program script snippet">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-square-code"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Fast Code Search</span>
+                        <h3>Blackbox AI</h3>
+                    </div>
+                </div>
+                <p class="card-desc">High-speed coding search engine built to answer technical queries, extract code from videos, and autocomplete functions.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.blackbox.ai" target="_blank" class="btn">Go to Blackbox <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 49. InVideo AI -->
+            <div class="card" data-keywords="invideo video creator youtube video script maker video editor automatic video producer">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-play"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">Automated Video Studio</span>
+                        <h3>InVideo AI</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Generate ready-to-publish YouTube, TikTok, and Instagram videos complete with voiceovers, stock clips, and subtitles from simple text.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://invideo.io" target="_blank" class="btn">Go to InVideo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 50. Upscale.media (Photo Editor) -->
+            <div class="card" data-keywords="upscale media photo editor picture resolution quality photo enhancer photo upscale hd 4k">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></div>
+                    <div class="card-title-group">
+                        <span class="card-tag">HD Photo Enhancer</span>
+                        <h3>Upscale.media</h3>
+                    </div>
+                </div>
+                <p class="card-desc">Simple, efficient photo editor tool for instantly upscaling pixelated or low-resolution images into crisp 4K pictures.</p>
+                <button class="toggle-desc" onclick="toggleText(this)">Read More</button>
+                <a href="https://www.upscale.media" target="_blank" class="btn">Go to Upscale.media <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- M.1 Studio Section -->
+    <section class="studio-section" id="studio">
+        <span class="studio-badge"><i class="fa-solid fa-heart"></i> Crafted with Care</span>
+        <h2 class="studio-title">Made by M.1 Studio</h2>
+        <p class="studio-text">
+            At <strong>M.1 Studio</strong>, hamara maqsad sab doston ke liye internet aur modern AI technology ko aasan aur accessible banana hai. Ham din-raat mehnat karke behtareen, reliable, aur ultra-fast platforms build karte hain taake aapka time save ho aur aapko ek hi jagah sab top-tier tools mil sakein.
+        </p>
+
+        <!-- Pumpkin Store Link Card -->
+        <div class="pumpkin-card" id="pumpkin">
+            <i class="fa-solid fa-basket-shopping pumpkin-icon"></i>
+            <div>
+                <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 4px;">Pumpkin Store</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Explore official products & services curated by M.1 Studio.</p>
+            </div>
+            <a href="https://m1studioup-source.github.io/Pumpkin-store-/" target="_blank" class="pumpkin-btn">
+                Visit Pumpkin Store <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 NexusAI Hub. Developed with dedication by <strong>M.1 Studio</strong>. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Engine -->
+    <script>
+        // Search Engine Dynamic Filter
+        const searchInput = document.getElementById('searchInput');
+        const cards = document.querySelectorAll('.card');
+
+        searchInput.addEventListener('input', function(e) {
+            filterTools(e.target.value.toLowerCase());
+        });
+
+        function setSearch(keyword) {
+            searchInput.value = keyword;
+            filterTools(keyword.toLowerCase());
+        }
+
+        function filterTools(query) {
+            cards.forEach(card => {
+                const keywords = card.getAttribute('data-keywords').toLowerCase();
+                const title = card.querySelector('h3').innerText.toLowerCase();
+                const desc = card.querySelector('.card-desc').innerText.toLowerCase();
+
+                if (keywords.includes(query) || title.includes(query) || desc.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Toggle Read More / Read Less for long descriptions
+        function toggleText(btn) {
+            const desc = btn.previousElementSibling;
+            desc.classList.toggle('expanded');
+            if (desc.classList.contains('expanded')) {
+                btn.innerText = 'Show Less';
+            } else {
+                btn.innerText = 'Read More';
+            }
+        }
+    </script>
+</body>
+</html>
